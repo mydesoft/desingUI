@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>VTU | Register</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/admin.css" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    
+  <div class="container">
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+      <div class="col-xl-6 col-lg-6 col-md-6">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="p-5">
+                  <div class="text-center">
+                    <a href="../index.html">
+                      <img src="img/vtulogo.png" alt="VTU:Buy" title="VTU: Buy VTU" width="30%">
+                    </a>
+
+                    <h1 class="h4 text-gray-900 mb-4">Create An Account!</h1>
+                  </div>
+
+                  <div><p class="text-warning"></p></div>
+                  
+                  <form id="mainForm" class="user" role="form" method="post">
+
+                    <div class="form-group">
+                      <label for="id_phone">Phone number</label>
+                      <input type="number" name="" autofocus class="form-control" id="id_phone" placeholder="Format: 2348181845763" required>
+
+                      <small class="form-text text-muted">
+                          Phone/Whatsapp Number Preferrable format 2348181845763
+                     </small>
+
+                      <div id="error"></div><!-- //Validation Message for Phone Number Inserted -->
+                    </div>
+
+
+                    <div class="form-group">
+                      <label for="id_username">Username</label>
+                      <input type="text" name="" autofocus class="form-control" placeholder="Username"required id="id_username">
+                      
+                      <small class="form-text text-muted">Required and Unique username</small>
+                    </div>
+
+
+                    <div class="form-group">
+                      <label for="id_email">Email</label>
+                      <input type="email" name=""  class="form-control" placeholder="Email" required id="id_email">
+
+                      <small class="form-text text-muted">Required. Input a valid email address.</small>
+                    </div>
+
+
+                    <div class="form-group">
+                      <label for="id_password1">Password</label>
+                      <input type="password" name="" class="form-control" placeholder="Password" required  id="id_password1">
+
+                      <small class="form-text text-muted">
+                        <ul>
+                          <li>Your password can’t be too similar to your other personal information.</li>
+                          <li>Your password must contain at least 8 characters.</li>
+                          <li>Your password can’t be a commonly used password.</li>
+                          <li>Your password can’t be entirely numeric.</li>
+                        </ul>
+                      </small>
+                    </div>
+
+
+                    <div class="form-group">
+                      <label for="id_password2">Password confirmation</label>
+                      <input type="password" name="" class="form-control" placeholder="Password confirmation" required id="id_password2">
+
+                      <small class="form-text text-muted">
+                          Enter the same password as before, for verification.
+                      </small>
+                    </div>
+
+
+                    <div class="form-group">
+                      <button id="submit" class="btn btn-success btn-user btn-block" type="submit">
+                          Register
+                      </button>
+                    </div>
+                  </form>
+
+                  <hr>
+
+                  <div class="text-center">
+                    <a class="small" href="password-reset.html">Reset Password</a>
+                  </div>
+
+                  <div class="text-center">
+                    <a class="small" href="index.html">Already Registered? Login!</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Validation Code for the form input Phone Number Entered with JavaScript -->
+  <script>
+
+  //Nigerian mobile number prefixes from the four major telcos - MTN, GLO, AIRTEL & ETISALAT
+  const telcoPrefixes = [703, 706, 803, 806, 810, 813, 814, 816, 903, 705, 805, 811, 815, 905, 701, 708, 802                   , 808, 812, 902, 809, 817, 818, 909, 804];
+
+  //search array for specific values
+  function in_array(value, array){
+    var index = array.indexOf(value);
+    if(index == -1){
+      return false;
+    }else{
+      return index;
+    }
+  }
+
+  //error div
+  var errorDiv = document.getElementById("error");
+  
+  //phone number text field
+  var phoneInput = document.getElementById("id_phone");
+  var dialingCode, mobilePrefix, checkArray;
+
+  phoneInput.addEventListener("change",function(){
+
+    //get value from textbox
+    phoneInputValue = phoneInput.value;
+
+    //get value length
+    var inputLength = phoneInputValue.length;
+
+    //if length is less than the required length of 13
+    if(inputLength < 13){
+
+      errorDiv.innerHTML = "Invalid Phone Number";
+      errorDiv.classList.remove("text-success");                        
+      errorDiv.classList.add("text-danger");
+      
+
+    //if length is equal to 13 (23470xxxxxxxx)
+    }else if(inputLength === 13){
+
+          //get mobile number prefix - 706 or 703 - depending on telco
+          mobilePrefix = Number(phoneInputValue.substr(3,3));
+
+          //get dialling code from mobile number
+          dialingCode = Number(phoneInputValue.substr(0,3));
+
+          //check if mobile prefix exists in telcoPrefixes array    
+          checkArray = in_array(mobilePrefix, telcoPrefixes);
+          if(checkArray === false){
+            
+            errorDiv.innerHTML = "Invalid phone number";
+            errorDiv.classList.remove("text-success");                        
+            errorDiv.classList.add("text-danger");          
+            console.log("invalid phone number");
+
+          }else if((checkArray >= 0) && (dialingCode === 234)){
+
+            errorDiv.innerHTML = "Valid phone number";
+            errorDiv.classList.remove("text-danger");       
+            errorDiv.classList.add("text-success");                       
+            console.log("Valid phone number");
+
+          }else{
+
+            errorDiv.innerHTML = "Invalid phone number";
+            errorDiv.classList.remove("text-success");                        
+            errorDiv.classList.add("text-danger");      
+            console.log("invalid phone number");
+
+          }
+    }else if(inputLength >= 14){
+      errorDiv.innerHTML = "invalid phone number";
+      errorDiv.classList.remove("text-success");                        
+      errorDiv.classList.add("text-danger");        
+      console.log("invalid phone number");
+    }
+  });
+</script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

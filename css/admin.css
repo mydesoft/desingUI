@@ -1,0 +1,153 @@
+ body {
+   background-color: #23282d!important;;
+}
+
+.text-bolded{
+    font-weight: bold;
+}
+
+.sidebar-bg-color{
+
+   background-color: #23282d;;
+
+}
+
+.sidebar-bolded{
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    
+}
+
+.sidebar-items-bolded{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.money-bolded{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card-bolded{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card-footer-text{
+    font-size: 13px;
+}
+
+.card-header-text{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.card-body-text{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pad-left{
+    padding-left: 20px; 
+    margin-top:20px;
+}
+
+.form-control-sm{
+    width: 500px;
+}
+
+
+.paginate_button{
+    text-decoration: none;
+    color: darkgray;
+}
+
+.text-little{
+    font-size: 10px;
+}
+
+.img-cable-tv{
+    width: 38%;
+    height: 30%;
+}
+
+.img-cable-tv-plans{
+    width: 34%;
+    height: 20%;
+}
+
+.card-cabletv-text{
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+}
+
+.cable-tv-text{
+    font-size: 15px;
+    color: black;
+}
+
+.recharge-cable-tv-btn{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.img-airtime-topup {
+    width: 38%;
+    height: 30%;
+}
+
+.img-data-topup{
+    width: 38%;
+    height: 30%;
+}
+
+.text-small{
+    font-size: 13px;
+}
+
+.img-data-plans{
+    width: 34%;
+    height: 20%;
+}
+
+.img-electricity-plans{
+    width: 38%;
+    height: 30%;
+}
+
+.img-electricity-plan{
+  width: 99%;
+  height: 80%;  
+}
+
+.transaction-header-small{
+    font-size: 15px;
+    font-family: sans-serif;
+    padding: 0px;
+}
+
+.transaction-link-style{
+    text-decoration: none;
+}
+
+
+.table-transactions{
+    border: 2px black solid;
+
+}
+
+.transaction-title-text{
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+.transaction-table-text{
+    color: black;
+    font-size: 15px;
+}
+
