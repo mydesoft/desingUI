@@ -370,10 +370,8 @@
 
                                 <div class="card-body">
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-md-7">
                                          
-                                            <!-- form to recharge -->
-                                            <form>
                                                 <div class="form-group mb-2">
                                                     <label for="recharge-number">Network</label>
                                                     <input type="text" name="" class="form-control" value="AIRTEL" disabled>
@@ -384,9 +382,40 @@
                                                     <input type="text" name="" class="form-control" value="airtel_airtime" disabled="">
                                                 </div>
 
+
+                                                 <!-- BUTTONS FOR AMOUNT TO RECHARGE -->
+                                                <div class="row mb-2 mt-2">
+                                                    <div class="col-2 mr-4 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="100-btn" data-amount ="100">₦100</button>
+                                                    </div>
+                                                    <div class="col-2 mr-4 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="200-btn" data-amount ="200">₦200</button>
+                                                        
+                                                    </div>
+                                                    <div class="col-2 mr-4 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="500-btn" data-amount ="500">₦500</button>
+                                                        
+                                                    </div>
+                                                    <div class="col-2 mr-4 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="1000-btn" data-amount ="1000">₦1000</button>
+                                                        
+                                                    </div>
+
+                                                     <div class="col-2 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="1000-btn" data-amount ="2000">₦2000</button>
+                                                        
+                                                    </div>
+
+                                                </div>
+
+                                            <!-- END BUTTONS FOR AMOUNT TO RECHARGE -->
+
+
+                                            <!-- form to recharge -->
+                                            <form>
                                                 <div class="form-group mb-2">
                                                     <label for="recharge-number">Amount to Recharge</label>
-                                                    <input type="number" min="100" name="" class="form-control" placeholder="E.g 1000">
+                                                    <input type="number" min="100" name="" class="form-control" placeholder="E.g 1000" id="recharge-input" value="">
                                                     <small class="text-danger">Minimum amount to purchase is 100</small>
                                                 </div>
 
@@ -402,7 +431,7 @@
                                             <!-- End of form to recharge -->
                                         </div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <u><h5 class="card-body-text">How to Top-Up Airtime</h5></u>
 
                                                 <p class="">TOP-UP your MTN, 9MOBILE, AIRTEL, GLO</p>
@@ -471,7 +500,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.js"></script>
-
+    <script src="../js/amount-buttons.js"></script>
 </body>
 
 </html>

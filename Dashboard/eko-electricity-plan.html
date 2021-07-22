@@ -363,7 +363,7 @@
                     <!-- Content Row -->
                     <div class="row">
 
-                        <div class="col-md-6 offset-md-3">
+                        <div class="col-md-7 offset-md-2">
                             <div class="card border-dark shadow mb-4">
                                 <div class="card-body">
                                     <h4 class="card-cabletv-text mb-4">EKO ELECTRICITY</h4>
@@ -409,22 +409,52 @@
                                     <!-- End of Customer Info Table -->
 
 
+                                        <!-- BUTTONS FOR AMOUNT TO RECHARGE -->
+                                            
+                                                    <div class="row amount-btns mb-2 mt-2">
+                                                    <div class="col-2 mr-4 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="100-btn" data-amount ="500">₦500</button>
+                                                    </div>
+                                                    <div class="col-2 mr-4 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="200-btn" data-amount ="1000">₦1000</button>
+                                                        
+                                                    </div>
+                                                    <div class="col-2 mr-4 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="500-btn" data-amount ="1500">₦1500</button>
+                                                        
+                                                    </div>
+                                                    <div class="col-2 mr-4 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="1000-btn" data-amount ="2000">₦2000</button>
+                                                        
+                                                    </div>
+
+                                                     <div class="col-2 btn-group mt-1">
+                                                        <button class="btn btn-info btn-sm btn-amount" id="1000-btn" data-amount ="2500">₦2500</button>
+                                                        
+                                                    </div>
+
+                                                </div>
+                                                
+
+                                            <!-- END BUTTONS FOR AMOUNT TO RECHARGE -->
+
+
                                     <form>
+
                                         <div class="form-group">
-                                            <div class="form-group">
+                                            <label class="cable-tv-text">Amount</label>
+                                            <input type="number" name="" class="form-control" id="recharge-input" value="">
+                                        </div>
+
+                                        <div class="form-group">
                                                 <label class="cable-tv-text">Recharge Type</label>
                                                 <input type="text" name="" disabled="" value="EKO POSTPAID" class="form-control">
                                         </div>
-                                        </div>
+                                        
 
                                         <div class="form-group">
                                             <label class="cable-tv-text">Phone</label>
                                             <input type="text" name="" class="form-control">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="cable-tv-text">Amount</label>
-                                            <input type="number" name="" class="form-control">
                                         </div>
 
                                         <button class="btn btn-dark btn-block" id="recharge-btn">
@@ -474,6 +504,8 @@
 
     <!-- Custom scripts for all pages-->
     <script src="../js/sb-admin-2.js"></script>
+    <script src="../js/amount-buttons.js"></script>
+
  
 
     <!-- JavaScript Code for the Hidden Table -->

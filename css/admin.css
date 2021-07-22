@@ -2,6 +2,16 @@
    background-color: #23282d!important;;
 }
 
+/*.amount-btn{
+    width: 70px;
+    height: 30px;
+    background-color: #36b9cc;
+    border-radius: 5px;
+    color: white;
+    border: 0px;
+    margin-left: 10px;
+}*/
+
 .text-bolded{
     font-weight: bold;
 }
