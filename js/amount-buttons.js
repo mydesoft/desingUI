@@ -1,20 +1,18 @@
-     //Buttons for Recharge Cards and Electricity
-     const amountButtons = document.querySelectorAll('.btn-amount');
-     const allAmountButtons = Array.from(amountButtons)
+ //  Amount Buttons for Electricity and Recharge 
 
-     allAmountButtons.forEach(btn => {
+    const input =  document.getElementById("recharge-input")
+    const buttons =  document.querySelectorAll('.btn-amount')
 
-        btn.addEventListener('click', ()=>{
-            const rechargeValue = btn.dataset.amount;
-            const rechargeInput = document.getElementById('recharge-input');
-            rechargeInput.setAttribute('value', rechargeValue);
+    const allButtons = Array.from(buttons)
 
-        });
-     });
+     allButtons.forEach( button => {
+        button.addEventListener("click", () => {
+        input.setAttribute("value", button.dataset.amount)
+        input.value = button.dataset.amount
+      })
+     })
 
-
-    
-
-
-     
- 
+      input.addEventListener("keyup", (evt) => {
+        input.setAttribute("value", evt.target.value)
+        input.value = evt.target.value
+    })
